@@ -34,13 +34,18 @@ bracken -d kraken_database \
         -r 100 -l S -t 10
 ```
 **Breakdown of Options**
-Option	Parameter	Description
--d	kraken_database	Path to the Kraken2 database used during classification. Bracken requires the same database.
--i	kraken2_output/ERR14218891.k2report	Input file: Kraken2 report (.kreport) containing taxonomic classification results.
--o	bracken_output/ERR14218891.bracken.out	Output file where Bracken’s re-estimated abundances will be saved.
--r	100	Read length (in base pairs). Needed for Bracken’s statistical model to redistribute reads.
--l	S	Taxonomic level for abundance estimation: S = Species. (Other options: G = Genus, F = Family, etc.).
--t	10	Threshold: Minimum number of reads required to report a taxon. Taxa with fewer reads are excluded.
+
+## Breakdown of Options
+
+| Option | Parameter                                      | Description                                                                                         |
+|-------|------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| -d    | kraken_database                                | Path to the Kraken2 database used during classification. Bracken uses the same database.           |
+| -i    | kraken2_output/ERR14218891.k2report            | Input file: Kraken2 report (`.kreport`) containing taxonomic classification results.               |
+| -o    | bracken_output/ERR14218891.bracken.out         | Output file where Bracken’s re-estimated abundances will be saved.                                 |
+| -r    | 100                                            | Read length (in base pairs). Needed for Bracken’s statistical model to redistribute reads.         |
+| -l    | S                                              | Taxonomic level for abundance estimation (S = Species; other options: G = Genus, F = Family, etc). |
+| -t    | 10                                             | Threshold: Minimum number of reads required to report a taxon.                                     |
+
 **Summary**
 This Bracken command it to estimate species-level abundances (-l S), assuming 100 bp read length (-r 100). It will only include taxa supported by at least 10 reads
 
