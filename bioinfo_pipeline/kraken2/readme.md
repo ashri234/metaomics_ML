@@ -60,17 +60,19 @@ kraken2 --db kraken2_db_uhgg_v2.0.2 --threads 32 \
 ```
 Breakdown of Options
 
-Option	|                                                         |                Description                                                                   
------------------------------------------------------------------------------------------------------------------------------------------------------------|
-kraken2                                                          |Runs the Kraken 2 classifier for metagenomic sequence classification.
---db kraken2_db_uhgg_v2.0.2	                                     |Specifies the Kraken 2 database to use. Here, the UHGG v2.0.2 database (Unified Human Gastrointestinal Genome collection) is used.|
---threads 32	                                                    | Uses 32 CPU threads for faster parallel processing.|
---report kraken2_output/ERR14218891.k2report                     |	Generates a classification summary report with taxonomic breakdown of reads.|
---classified-out kraken2_output/ERR14218891_classified.fastq     |Stores all reads that were classified by Kraken 2 into this FASTQ file.|
---unclassified-out kraken2_output/ERR14218891_unclassified.fastq	|Stores all reads that were not classified into this FASTQ file.|
---output kraken2_output/ERR14218891.kraken2.out	                  |Produces a detailed classification result file with per-read taxonomic assignments.|
-bowtie2_output/ERR14218891_nonhuman.fastq.1.gz	                   |Input file 1: First set of non-human paired-end reads (R1).|
-bowtie2_output/ERR14218891_nonhuman.fastq.2.gz	                   |Input file 2: Second set of non-human paired-end reads (R2).|
+| Option                              | Description                                                                          |
+|--------------------------------------|--------------------------------------------------------------------------------------|
+| kraken2                             | Runs the Kraken 2 classifier for metagenomic sequence classification.                |
+| --db kraken2_db_uhgg_v2.0.2         | Specifies the Kraken 2 database to use.                                              |
+| --threads 32                        | Uses 32 CPU threads for faster parallel processing.                                  |
+| --report kraken2_output/ERR14218891.k2report | Generates a classification summary report with taxonomic breakdown of reads. |
+| --classified-out kraken2_output/ERR14218891_classified.fastq  | Stores all reads that were classified by Kraken 2 into this FASTQ file.       |
+| --unclassified-out kraken2_output/ERR14218891_unclassified.fastq | Stores all reads that were not classified into this FASTQ file.              |
+| --output kraken2_output/ERR14218891.kraken2.out | Produces a detailed classification result file with per-read taxonomic assignments.  |
+| bowtie2_output/ERR14218891_nonhuman.fastq.1.gz | Input file 1: First set of non-human paired-end reads (R1).                          |
+| bowtie2_output/ERR14218891_nonhuman.fastq.2.gz | Input file 2: Second set of non-human paired-end reads (R2).                         |
+
+
 **Summary**
 
 This command runs Kraken 2 on paired-end sequencing reads that have already been filtered to remove human sequences (using Bowtie2).
