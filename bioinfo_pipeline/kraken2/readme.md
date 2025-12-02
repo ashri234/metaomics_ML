@@ -69,17 +69,20 @@ kraken2	Runs the Kraken 2 classifier for metagenomic sequence classification.
 --output kraken2_output/ERR14218891.kraken2.out	Produces a detailed classification result file with per-read taxonomic assignments.
 bowtie2_output/ERR14218891_nonhuman.fastq.1.gz	Input file 1: First set of non-human paired-end reads (R1).
 bowtie2_output/ERR14218891_nonhuman.fastq.2.gz	Input file 2: Second set of non-human paired-end reads (R2).
-Summary
+**Summary**
+
 This command runs Kraken 2 on paired-end sequencing reads that have already been filtered to remove human sequences (using Bowtie2).
 
 Database used: UHGG v2.0.2 (Unified Human Gastrointestinal Genome collection).
 Outputs generated:
-.k2report → Taxonomic summary report.
-.classified.fastq → Reads assigned to taxa.
-.unclassified.fastq → Reads not assigned to any taxa.
-.kraken2.out → Detailed per-read classification.
+- .k2report → Taxonomic summary report.
+- .classified.fastq → Reads assigned to taxa.
+- .unclassified.fastq → Reads not assigned to any taxa.
+- .kraken2.out → Detailed per-read classification.
 Performance: Uses 32 threads for faster computation.
-📦 Database Requirements
+
+📦 **Database Requirements**
+
 Kraken2 Database
 Based on the Unified Human Gastrointestinal Genome (UHGG) v2.0.2
 Download link
